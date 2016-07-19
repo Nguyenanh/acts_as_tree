@@ -115,7 +115,7 @@ module ActsAsTree
         end
 
         def self.roots
-          where(:#{configuration[:foreign_key]} => nil).default_tree_order
+          where(:#{configuration[:foreign_key]} => 0).default_tree_order
         end
       EOV
 
